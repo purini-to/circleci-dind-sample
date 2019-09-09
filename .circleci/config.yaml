@@ -1,0 +1,20 @@
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: docker:19.03.2-git
+    working_directory: /var/lib/app
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Build
+          command: |
+            docker build . -t nginx-sample
+
+workflows:
+  version: 2
+  release:
+    jobs:
+      - build:
