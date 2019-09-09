@@ -7,6 +7,7 @@ jobs:
       - checkout
 #       - setup_remote_docker
       - run:
-        name: Build
-        command: |
-          docker build . -t nginx-sample
+          name: Build
+          command: |
+            docker build . -t nginx-sample
+  
