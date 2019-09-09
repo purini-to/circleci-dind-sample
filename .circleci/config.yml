@@ -10,9 +10,3 @@ jobs:
         name: Build
         command: |
           docker build . -t nginx-sample
-
-workflows:
-  version: 2
-  release:
-    jobs:
-      - build:
