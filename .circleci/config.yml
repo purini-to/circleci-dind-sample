@@ -1,12 +1,12 @@
 version: 2
 jobs:
   build:
-    machine: true
-#     docker:
-#       - image: docker:19.03.2-git
+#     machine: true
+    docker:
+      - image: docker:19.03.2-git
     steps:
       - checkout
-#       - setup_remote_docker
+      - setup_remote_docker
       - run:
           name: Build
           command: |
